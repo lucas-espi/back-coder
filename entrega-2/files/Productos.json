@@ -1,0 +1,29 @@
+[
+  {
+    "id": 0,
+    "title": "TECLADO1",
+    "description": "TECLADO-MECANICO",
+    "price": 4400,
+    "thumbnail": "Sin imagen",
+    "code": "abc123",
+    "stock": 25
+  },
+  {
+    "id": 1,
+    "title": "TECLADO2",
+    "description": "TECLADO-SEMI-MECANICO",
+    "price": 2900,
+    "thumbnail": "Sin imagen",
+    "code": "abc1234",
+    "stock": 25
+  },
+  {
+    "id": 2,
+    "title": "TECLADO3",
+    "description": "TECLADO-MECANICO",
+    "price": 8900,
+    "thumbnail": "Sin imagen",
+    "code": "code3-modificado",
+    "stock": 25
+  }
+]
