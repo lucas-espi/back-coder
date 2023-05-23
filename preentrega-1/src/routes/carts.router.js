@@ -46,6 +46,7 @@ router.post('/:cid', async (req, res) => {
       const newProduct = { ...prod, quantity: 1 };
       const products = await productManager.addProduct(newProduct);
       res.json(products);
+      res.status(201).json({ success: true, message: 'Product added successfully' });
     }
   } catch (error) {
     res.status(404).json({ error: error.message });

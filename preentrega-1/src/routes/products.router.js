@@ -52,19 +52,6 @@ router.post('/', async (req, res) => {
     }
   });
 
-// Endpoint para actualizar un producto por su ID
-router.put(':pid', async (req, res) => {
-    try {
-      const { pid } = req.params;
-      const prod = req.body;
-  
-      const updatedProduct = await productManager.updateProduct(pid, prod);
-  
-      res.json(updatedProduct); // Devuelve el producto actualizado
-    } catch (error) {
-      res.status(500).json({ error: error.message });
-    }
-  });
 
 // Endpoint para eliminar un producto por su ID
 router.delete('/:pid', async (req, res) => {

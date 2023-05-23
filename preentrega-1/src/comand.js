@@ -129,11 +129,11 @@
 
 // post
 // {
-//     "title": "TECLADO12-enviadoPOST",
+//     "title": "TECLADO13-enviadoPOST",
 //     "description": "TECLADO-MECANICO",
 //     "price": 8900,
 //     "thumbnail": "Sin imagen",
-//     "code": "bc123456789",
+//     "code": "bc12345678910",
 //     "stock": 25
 //   }
 
