@@ -1,8 +1,9 @@
-import { Router } from 'express';
+import { Router }  from 'express';
+import ProductManager from "../files/productManager.js";
+import __dirname from "../utils.js";
 const router = Router();
 
-import ProductManager from "../files/productManager.js";
-const path = '../files/archivos/cart.json';
+const path = `${__dirname}/files/archivos/productos.json`;
 const productManager = new ProductManager(path);
 
 
@@ -11,16 +12,16 @@ router.get('/', async (req, res) => {
     try {
       const { limit } = req.query;
   
-      const products = await productManager.getProducts();
+      const carts = await productManager.getProducts();
   
       if (limit) {
-        const limitedProducts = products.slice(0, parseInt(limit));
+        const limitedProducts = carts.slice(0, parseInt(limit));
         res.json(limitedProducts);
       } else {
-        res.json(products);
+        res.json(carts);
       }
     } catch (error) {
-      res.status(500).json({ error: error.message });
+      res.status(500).json({ error: 'Ocurrio un error en get/' });
     }
   });
 
@@ -28,9 +29,9 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
     try {
       const prod = req.body;
-      const products = await productManager.addProduct(prod);
+      const carts = await productManager.addProduct(prod);
 
-      res.json(products);
+      res.json(carts);
       res.status(201).json({ success: true, message: 'Product added successfully' });
 
     } catch (error) {
@@ -44,9 +45,9 @@ router.delete('/:pid', async (req, res) => {
     try {
       const { pid } = req.params;
   
-      const product = await productManager.deleteProduct(parseInt(pid));
+      const carts = await productManager.deleteProduct(parseInt(pid));
   
-      res.json({ message: `Producto ${product} eliminado correctamente` });
+      res.json({ message: `Producto ${carts} eliminado correctamente` });
     } catch (error) {
       res.status(500).json({ error: error.message });
     }

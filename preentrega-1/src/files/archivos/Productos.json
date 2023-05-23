@@ -88,5 +88,14 @@
     "thumbnail": "Sin imagen",
     "code": "bc1234567",
     "stock": 25
+  },
+  {
+    "id": 10,
+    "title": "TECLADO11",
+    "description": "TECLADO-NUMERICO",
+    "price": 1300,
+    "thumbnail": "Sin imagen",
+    "code": "bc12345678",
+    "stock": 25
   }
 ]

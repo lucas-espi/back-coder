@@ -1,9 +1,11 @@
 import { Router } from "express";
 import ProductManager from "../files/productManager.js";
-const path = '../files/archivos/Productos.json';
-const productManager = new ProductManager(path);
+import __dirname from "../utils.js";
 const router = Router();
 
+
+const path = `${__dirname}/files/archivos/productos.json`;
+const productManager = new ProductManager(path);
 
 // Endpoint para obtener todos los productos
 router.get('/', async (req, res) => {
