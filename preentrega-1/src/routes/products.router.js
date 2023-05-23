@@ -7,6 +7,7 @@ const router = Router();
 const path = `${__dirname}/files/archivos/productos.json`;
 const productManager = new ProductManager(path);
 
+
 // Endpoint para obtener todos los productos
 router.get('/', async (req, res) => {
     try {
@@ -47,7 +48,7 @@ router.post('/', async (req, res) => {
       res.status(201).json({ success: true, message: 'Product added successfully' });
 
     } catch (error) {
-      res.status(500).json({ error: error.message });
+      res.status(500).json({ error: 'Ocurrio un error en get /api/products/' });
     }
   });
 

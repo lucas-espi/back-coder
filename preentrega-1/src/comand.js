@@ -127,3 +127,21 @@
 // Ultimo llamado a getProducts, muestra los productos actualizados.
 // console.log(await pm.getProducts());
 
+// post
+// {
+//     "title": "TECLADO12-enviadoPOST",
+//     "description": "TECLADO-MECANICO",
+//     "price": 8900,
+//     "thumbnail": "Sin imagen",
+//     "code": "bc123456789",
+//     "stock": 25
+//   }
+
+// delete
+// localhost:8080/api/products/11
+
+// Agregado con post en carts
+// localhost:8080/api/carts/5
+
+// Eliminado del carts
+// localhost:8080/api/carts/8
