@@ -36,3 +36,10 @@ const io = new Server(server);
 // });
 
  
+io.on('connection', socket=>{
+    console.log('connecting');
+
+    socket.on('message1', data=>{
+        io.emit('log',data);
+    });
+});
