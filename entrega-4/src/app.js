@@ -4,42 +4,41 @@ import handlebars from 'express-handlebars';
 import viewsRouter from './routes/views.router.js';
 import __dirname from './utils.js'
 
+import ProductManager from './files/productManager.js';
+const path = `${__dirname}/files/archivos/productos.json`;
+const productManager = new ProductManager(path);
+
 const app = express();
 
 app.use(express.static(`${__dirname}/public`));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
 app.engine('handlebars', handlebars.engine());
-app.set('view engine', 'handlebars');
 app.set('views', `${__dirname}/views`);
+app.set('view engine', 'handlebars');
 
 app.use('/', viewsRouter);
 
 
 
-const server = app.listen(8080, () => { console.log(`Run server 8080`)});
+const server = app.listen(8080, () =>  console.log(`Run server 8080`));
+const io = new Server(server, { cors: { origin: "*" } });
 
-const io = new Server(server);
 
-// io.on('connection', socket =>{
-//     console.log('New Client connection');
 
-//     socket.on('message', data=>{
-//         console.log(data);
-//     });
+io.on('connection', socket =>{
+    console.log('Nuevo cliente conectado');
+    
 
-//     socket.emit('evento_socket_individual', 'este mensaje solo lo resive el socket');
+    socket.on('nuevo-producto', async data=>{
 
-//     socket.broadcast.emit('evento_todos_menos_actual', 'Lo van a ver todos los clientes menos el actual')
+        await productManager.addProduct(data);
+        
+        const listProducts = await productManager.getProducts();
+        
+        io.emit('listProducts', listProducts)
 
-//     io.emit('evento_todos', 'Todos reciben el mensaje')
-// });
-
- 
-io.on('connection', socket=>{
-    console.log('connecting');
-
-    socket.on('message1', data=>{
-        io.emit('log',data);
     });
+
 });

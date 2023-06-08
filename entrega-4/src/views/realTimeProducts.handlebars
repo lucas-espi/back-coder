@@ -1,0 +1,128 @@
+<div class="form-client"> 
+  <form action="/realtimeproducts" method="post" id="formProd">
+    <label for="title">Titulo: </label>
+    <input type="text" id="title" name="title">
+    <label for="description">Descripcion: </label>
+    <input type="text" id="description" name="description">
+    <label for="price">Precio: </label>
+    <input type="number" id="price" name="price">
+    <label for="thumbnails">Thumbnails: </label>
+    <input type="text" id="thumbnails" name="thumbnails">
+    <label for="code">Códe: </label>
+    <input type="text" id="code" name="code">
+    <label for="stock">Stock: </label>
+    <input type="number" id="stock" name="stock"> 
+    <input class="btn" type="submit" value="enviar">
+  </form>
+  
+  
+</div>
+<div class="list-prod">
+  {{#if products}}
+  <h1>Aqui tenemos la lista de productos "/realtimeproducts":</h1>
+  <ul>
+    {{#each products}}
+    <li>
+      <h4>Producto:{{this.title}}</h4>
+      <p>Id:{{this.id}}</p>
+      <p>Descripcion:{{this.description}}</p>
+      <p>Precio:{{this.price}}</p>
+    </li>
+    {{/each}}
+  </ul>
+  {{else}}
+  <h2>Aun no tenemos productos cargados!</h2>
+  {{/if}}
+</div>
+
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #5B2C6F;
+    padding: 1rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .list-prod {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #2980B9;
+    border-radius: .6rem;
+    color: #f6f9fc;
+    width: 85%;
+    right: 0;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  li {
+    margin: 1rem;
+    background-color: #273c50;
+    border-radius: .4rem;
+    padding: 1.2rem;
+  }
+
+  h4 {
+    text-align: center;
+  }
+
+  p {
+    margin: 0;
+    font-weight: 500;
+    font-family: cursive;
+  }
+
+  h2 {
+    color: #666666;
+    font-size: 20px;
+  }
+
+  .form-client{
+    height: 18rem;
+    width: 12rem;
+    border-radius: .4rem solid black;
+    background-color: #273c50;
+    color: #f6f9fc;
+    width: 15%;
+    left: 0;
+    padding: 1rem;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  label{
+    font-size: 1.1rem;
+  }
+  input{
+    background-color: #79aedf;
+    border: none;
+  }
+  .btn {
+    margin-top: 1rem;
+    color: azure;
+    background-color: #666666;
+    padding: .5rem;
+  }
+  h1{
+    text-align: center;
+  }
+</style> 
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/realtimeproducts.js"></script> 

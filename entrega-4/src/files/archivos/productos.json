@@ -1,0 +1,137 @@
+[
+  {
+    "id": 0,
+    "title": "TECLADO1",
+    "description": "TECLADO-MECANICO",
+    "price": 4400,
+    "thumbnail": "Sin imagen",
+    "code": "abc123",
+    "stock": 25
+  },
+  {
+    "id": 1,
+    "title": "TECLADO2",
+    "description": "TECLADO-SEMI-MECANICO",
+    "price": 2900,
+    "thumbnail": "Sin imagen",
+    "code": "abc1234",
+    "stock": 25
+  },
+  {
+    "id": 2,
+    "title": "TECLADO3",
+    "description": "TECLADO-MECANICO",
+    "price": 8900,
+    "thumbnail": "Sin imagen",
+    "code": "abc12345",
+    "stock": 25
+  },
+  {
+    "id": 3,
+    "title": "TECLADO4",
+    "description": "TECLADO-SEMI-MECANICO",
+    "price": 1900,
+    "thumbnail": "Sin imagen",
+    "code": "abc123456",
+    "stock": 25
+  },
+  {
+    "id": 4,
+    "title": "TECLADO5",
+    "description": "TECLADO-NUMERICO",
+    "price": 1300,
+    "thumbnail": "Sin imagen",
+    "code": "abc1234567",
+    "stock": 25
+  },
+  {
+    "id": 5,
+    "title": "TECLADO6",
+    "description": "TECLADO-MECANICO",
+    "price": 4430,
+    "thumbnail": "Sin imagen",
+    "code": "bc123",
+    "stock": 25
+  },
+  {
+    "id": 6,
+    "title": "TECLADO7",
+    "description": "TECLADO-SEMI-MECANICO",
+    "price": 2900,
+    "thumbnail": "Sin imagen",
+    "code": "bc1234",
+    "stock": 25
+  },
+  {
+    "id": 7,
+    "title": "TECLADO8",
+    "description": "TECLADO-MECANICO",
+    "price": 8900,
+    "thumbnail": "Sin imagen",
+    "code": "bc12345",
+    "stock": 25
+  },
+  {
+    "id": 8,
+    "title": "TECLADO9",
+    "description": "TECLADO-SEMI-MECANICO",
+    "price": 1900,
+    "thumbnail": "Sin imagen",
+    "code": "bc123456",
+    "stock": 25
+  },
+  {
+    "id": 9,
+    "title": "TECLADO10",
+    "description": "TECLADO-NUMERICO",
+    "price": 1300,
+    "thumbnail": "Sin imagen",
+    "code": "bc1234567",
+    "stock": 25
+  },
+  {
+    "id": 10,
+    "title": "TECLADO11",
+    "description": "TECLADO-NUMERICO",
+    "price": 1300,
+    "thumbnail": "Sin imagen",
+    "code": "bc12345678",
+    "stock": 25
+  },
+  {
+    "id": 12,
+    "title": "TECLADO12-enviadoPOST",
+    "description": "TECLADO-MECANICO",
+    "price": 8900,
+    "thumbnail": "Sin imagen",
+    "code": "bc123456789",
+    "stock": 25
+  },
+  {
+    "id": 12,
+    "title": "TECLADO13-enviadoPOST",
+    "description": "TECLADO-MECANICO",
+    "price": 8900,
+    "thumbnail": "Sin imagen",
+    "code": "bc12345678910",
+    "stock": 25
+  },
+  {
+    "id": 13,
+    "title": "Mouse",
+    "description": "mouse-inalambrico",
+    "price": "4555",
+    "thumbnail": "-",
+    "code": "m1",
+    "stock": "15"
+  },
+  {
+    "id": 14,
+    "title": "mouse2",
+    "description": "Mouse-cable",
+    "price": "3445",
+    "thumbnail": "-",
+    "code": "mc1",
+    "stock": "12"
+  }
+]
